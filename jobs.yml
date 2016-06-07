@@ -18,3 +18,4 @@ jobs:
     type: ecsDeploy
     steps:
       - GET createNginxManifest
+      - GET ecsTestCluster
