@@ -1,11 +1,16 @@
 jobs:
-  - name: job1
+  - name: createBBManifest
     type: manifest
     steps:
       - GET busybox
 
-  - name: job2
+  - name: createNginxManifest
     type: manifest
     steps:
       - GET nginx
       - PUT busybox
+
+  - name : deployToEcs
+    type: ecsDeploy
+    steps:
+      - GET: createNginxManifest
