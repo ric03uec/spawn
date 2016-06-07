@@ -1,5 +1,5 @@
 resources:
-  - name: nginx
+  - name: nginxImage
     type: image
     integration: ric03uec-dockerhub
     source:
@@ -7,11 +7,19 @@ resources:
       isPull: false
       tag: latest
 
-  - name: busybox
+  - name: busyboxImage
     type: image
     integration: ric03uec-dockerhub
     source:
       name: "library/busybox"
+      isPull: true
+      tag: latest
+
+  - name: alpineImage
+    type: image
+    integration: ric03uec-dockerhub
+    source:
+      name: "library/alpine"
       isPull: true
       tag: latest
 

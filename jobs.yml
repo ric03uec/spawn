@@ -8,7 +8,11 @@ jobs:
     type: manifest
     steps:
       - GET nginx
-      - PUT busybox
+
+  - name: createAlpineManifest
+    type: manifest
+    steps:
+      - GET alpine
 
   - name : deployToEcs
     type: ecsDeploy
