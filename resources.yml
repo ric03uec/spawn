@@ -23,16 +23,9 @@ resources:
       isPull: true
       tag: latest
 
-  - name: samplePyt
-    type: gitRepo
-    integration: github
-    source:
-      name: "ric03uec/sample_python"
-      branch: master
-
   - name: ecsTestCluster
     type: ecsCluster
     integration: ric03uec-aws
     source:
-      name : "test"
+      name : "clusterName"
       region: "us-east-1"

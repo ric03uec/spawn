@@ -2,17 +2,17 @@ jobs:
   - name: createBBManifest
     type: manifest
     steps:
-      - GET busybox
+      - GET busyboxImage
 
   - name: createNginxManifest
     type: manifest
     steps:
-      - GET nginx
+      - GET nginxImage
 
   - name: createAlpineManifest
     type: manifest
     steps:
-      - GET alpine
+      - GET alpineImage
 
   - name : deployToEcs
     type: ecsDeploy
