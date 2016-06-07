@@ -17,4 +17,4 @@ jobs:
   - name : deployToEcs
     type: ecsDeploy
     steps:
-      - GET: createNginxManifest
+      - GET createNginxManifest
